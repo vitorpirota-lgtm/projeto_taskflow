@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<h1>Listar Atividades:</h1>
+<h2>Observação: * É necessário enviar as atividades na aba "Criar Atividade" * </h2>
+<br>
+{%  for atividade in dados_atividade %}
+<h2>Suas atividades estão listadas aqui!</h2>
+{{atividade.nome_atividade}}<br>
+{{atividade.descricao_atividade}}<br>
+{{atividade.data_atividade}}<br>
+{{atividade.categoria_atividade}}<br>
+{{atividade.importancia_atividade}}<br>
+{%  endfor  %}
+
+{% endblock conteudo %}

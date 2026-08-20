@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+</head>
+<body>
+<meta charset="UTF-8">
+<title>TaskFlow Corp - Sistema Interno</title>
+<style>
+body { font-family: "Arial Black", sans-serif; margin: 5; padding: 0; background-color: floralwhite; }
+header { background-color: purple; color: darkgoldenrod; padding: 15px 30px; text-align: center; border-radius: 20px; }
+nav a { color: darkgoldenrod; text-decoration: none; margin-right: 20px; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
+main { padding: 30px; max-width: 900px; margin: 10 auto; background: darkgoldenrod; margin-top: 20px; border-radius: 8px; }
+footer { text-align: center; padding: 15px; color: goldenrod; font-size: 0.9em; margin-top: 30px; }
+.card { border: 1px solid #e2e8f0; padding: 15px; border-radius: 6px; margin-bottom: 10px; }
+</style>
+
+<header>
+<h1 style="margin:0 0 10px 0; font-size: 20px;">TaskFlow Corp | Gestão Interna</h1>
+<nav>
+<a href="{{url_for('index')}}">Tela Inicial</a>
+<a href="{{url_for('pessoa')}}">Usuário</a>
+<a href="{{url_for('criar_atividade')}}">Criar Atividade</a>
+<a href="{{url_for('listar_atividades')}}">Listar Atividades</a>
+    </nav>
+</header>
+
+{% block conteudo %}
+{% endblock conteudo %}
+</body>
+</html>

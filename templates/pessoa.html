@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<h1> Criar Usuário: </h1>
+<form action="{{url_for('pessoa')}}" method="post">
+    <label>
+        Nome do Usuário:
+        <input name="form_usuario" type="text" placeholder="Ex: Vitor" required>
+    </label>
+    <br>
+
+    <label>
+        <br>
+        Data de Nascimento:
+        <input name="form_data_usuario" type="date" required>
+    </label>
+    <br>
+    <br>
+
+    <label>
+        CPF:
+        <input name="form_cpf" type="text" required>
+
+    </label>
+    <br>
+    <br>
+
+    Profissão:
+    <br>
+    <input name="form_profissao" value="1" type="checkbox">
+    Estudante
+    <label>
+        <input name="form_profissao" value="2" type="checkbox">
+        Engenheiro
+    </label>
+    <input name="form_profissao" value="3" type="checkbox">
+    Médico
+    <label>
+        <input name="form_profissao" value="4" type="checkbox">
+        Advogado
+        <label>
+            <input name="form_profissao" value="5" type="checkbox">
+            Outros...
+            <br>
+            <br>
+
+            Informações Adicionais do Usuário(Não Obrigatório):
+            <br>
+            <textarea name="form_informacoes" rows="10" cols="50"></textarea>
+        </label>
+        <br>
+        <br>
+
+    </label>
+    <button type="submit">Enviar Usuário</button>
+    <button type="reset">Redefinir Usuário</button>
+    <label>
+        {% endblock conteudo %}

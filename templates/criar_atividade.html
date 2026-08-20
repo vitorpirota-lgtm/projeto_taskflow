@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<h1> Crie uma Atividade: </h1>
+<form action="{{url_for('criar_atividade')}}" method="post">
+    <label>
+        Nome da Atividade:
+        <input name="form_atividade" type="text" placeholder="Ex: texto de rescisão" required
+
+    </label>
+    <br>
+    <br>
+
+    <label>
+        Descrição da Atividade:
+        <br>
+        <textarea name="form_descricao" rows="10" cols="50" required></textarea>
+    </label>
+    <br>
+    <label>
+        <br>
+        Data de Entrega da Atividade:
+        <input name="form_data_atividade" type="date" required>
+    </label>
+    <br>
+    <br>
+    <label>
+        Categoria:
+        <br>
+        <input name="form_categoria" value="1" type="checkbox">
+        Escolar
+        <label>
+            <input name="form_categoria" value="2" type="checkbox">
+            Trabalho
+        </label>
+        <input name="form_categoria" value="3" type="checkbox">
+        Lazer
+        <label>
+            <input name="form_categoria" value="4" type="checkbox">
+            Estudo
+            <label>
+                <input name="form_categoria" value="5" type="checkbox">
+                Jurídico
+                <br>
+                <br>
+
+                <label>
+                    Importância:
+                    <select name="form_importancia" required>
+                        <option value="muita urgencia">Muita urgência</option>
+                        <option value="urgencia">Urgência</option>
+                        <option value="pode esperar">Pode esperar</option>
+                        <option value="pouca urgencia">Pouca urgência</option>
+                        <option value="sem urgencia alguma">Sem urgência alguma</option>
+                    </select>
+                    <br>
+                    <br>
+
+                </label>
+                <button type="submit">Enviar Atividade</button>
+                <button type="reset">Redefinir Atividade</button>
+                <label>
+</form>
+<br>
+<br>
+
+{% endblock conteudo %}
